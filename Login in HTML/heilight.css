@@ -1,0 +1,9 @@
+body{
+   
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+#board{
+  border:1px solid rgb(214, 203, 203);
+  background-color: #cecece;
+}
