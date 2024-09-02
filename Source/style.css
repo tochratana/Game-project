@@ -1,9 +1,11 @@
-body{
-   
-  font-family: 'Courier New', Courier, monospace;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  font-family: "Press Start 2P", Courier, monospace;
   text-align: center;
+  background-color: gray;
 }
-#board{
-  border:1px solid rgb(214, 203, 203);
-  background-color: #cecece;
+#board {
+  border: 1px solid rgb(214, 203, 203);
+  background-color: #000;
 }

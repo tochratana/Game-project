@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>snack</title>
-    <link rel="stylesheet" href="heilight.css">
-    <script src="hover.js"></script>
-</head>
-<body>
-    <h1>Snake</h1>
-    <canvas id="board" width="400" height="400"></canvas>
-</body>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="flex justify-evenly">
+      <div class="mt-[20px] w-[200px]">
+        <h2 class="text-2xl mb-[20px]">Score</h2>
+        <h1 id="score" class="text-4xl text-[#431407]">0</h1>
+      </div>
+      <div class="mt-[20px]">
+        <h1 class="text-2xl mb-[20px]">Snake</h1>
+        <canvas id="board" width="500" height="500"></canvas>
+      </div>
+      <div class="mt-[20px] flex flex-col items-center">
+        <h2 class="text-2xl mb-[20px]">Speed</h2>
+        <input type="number" class="h-[50px] w-[200px]" id="inputSpeed" />
+        <button class="mt-[20px] bg-red-600 py-2 px-2 rounded-sm w-[100px" id="btnSpeed">Enter</button>
+      </div>
+    </section>
+    <button onclick="startNewGame()" id="newGameBtn" class="m-atuo mt-[20px] bg-gray-600 py-[10px] px-[40px] rounded-md hover:border-2 hover:border-black hover:text-white">Start</button>
+    <script src="./script.js"></script>
+  </body>
 </html>
