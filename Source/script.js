@@ -37,8 +37,8 @@ function getFromSpeed() {
 
 
 document.addEventListener("keydown", changeDirection);
-
-function initGame() {
+//  add speed 
+function initGame(addSpeed) {
   snakeX = blockSize * 5;
   snakeY = blockSize * 5;
   velocityX = 0;
@@ -48,8 +48,9 @@ function initGame() {
   foodY = Math.floor(Math.random() * rows) * blockSize;
   gameOver = false;
   score = 0;
+  addSpeed = getFromSpeed();
 }
-setInterval(update, gameSpeed);
+setInterval(update, gameSpeed =  getFromSpeed());
 // console.log("Initial gameSpeed:", getFromSpeed());
 function update() {
   if (gameOver) {
@@ -129,103 +130,8 @@ function endGame() {
 }
 
 function startNewGame() {
-  initGame(); // Restart the game
+  initGame(addSpeed); // Restart the game
 }
 
 initGame();
 
-// const board = document.getElementById("board");
-// const context = board.getContext("2d");
-// const blockSize = 20;
-// const cols = board.width / blockSize;
-// const rows = board.height / blockSize;
-// let score = 0; // Score variable
-
-// let snakeX = blockSize * 5;
-// let snakeY = blockSize * 5;
-// let velocityX = 0;
-// let velocityY = 0;
-// let snakeBody = [];
-// let foodX = Math.floor(Math.random() * cols) * blockSize;
-// let foodY = Math.floor(Math.random() * rows) * blockSize;
-// let gameOver = false;
-// const gameSpeed = 200; // Speed in milliseconds
-
-// document.addEventListener("keydown", changeDirection);
-
-// function update() {
-//   if (gameOver) {
-//     return;
-//   }
-
-//   context.fillStyle = "black";
-//   context.fillRect(0, 0, board.width, board.height);
-
-//   context.fillStyle = "red";
-//   context.fillRect(foodX, foodY, blockSize, blockSize);
-
-//   if (snakeX === foodX && snakeY === foodY) {
-//     snakeBody.push([foodX, foodY]);
-//     placeFood();
-//     score++; // Increase score
-//     document.getElementById("score").innerText = + score; // Update score display
-//   }
-
-//   for (let i = snakeBody.length - 1; i > 0; i--) {
-//     snakeBody[i] = snakeBody[i - 1];
-//   }
-//   if (snakeBody.length) {
-//     snakeBody[0] = [snakeX, snakeY];
-//   }
-
-//   snakeX += velocityX * blockSize;
-//   snakeY += velocityY * blockSize;
-
-//   context.fillStyle = "lime";
-//   context.fillRect(snakeX, snakeY, blockSize, blockSize);
-//   for (let i = 0; i < snakeBody.length; i++) {
-//     context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
-//   }
-
-//   // Game over condition
-//   if (
-//     snakeX < 0 ||
-//     snakeX >= cols * blockSize ||
-//     snakeY < 0 ||
-//     snakeY >= rows * blockSize
-//   ) {
-//     gameOver = true;
-//     alert("Game Over");
-//   }
-
-//   for (let i = 0; i < snakeBody.length; i++) {
-//     if (snakeX === snakeBody[i][0] && snakeY === snakeBody[i][1]) {
-//       gameOver = true;
-//       alert("Game Over");
-//     }
-//   }
-// }
-
-// function changeDirection(e) {
-//   if (e.code === "ArrowUp" && velocityY !== 1) {
-//     velocityX = 0;
-//     velocityY = -1;
-//   } else if (e.code === "ArrowDown" && velocityY !== -1) {
-//     velocityX = 0;
-//     velocityY = 1;
-//   } else if (e.code === "ArrowLeft" && velocityX !== 1) {
-//     velocityX = -1;
-//     velocityY = 0;
-//   } else if (e.code === "ArrowRight" && velocityX !== -1) {
-//     velocityX = 1;
-//     velocityY = 0;
-//   }
-// }
-
-// function placeFood() {
-//   foodX = Math.floor(Math.random() * cols) * blockSize;
-//   foodY = Math.floor(Math.random() * rows) * blockSize;
-// }
-
-// // Start the game with a set interval
-// setInterval(update, gameSpeed);
