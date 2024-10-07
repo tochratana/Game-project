@@ -1,67 +1,70 @@
+body {
+  background-color: gray;
+}
+
 .rock {
-	width: 200px;
-	background-color: red;
-	padding: 20px;
-	border-radius: 50%;
+  width: 200px;
+  background-color: red;
+  padding: 20px;
+  border-radius: 50%;
 }
 .papper {
-	width: 200px;
-	background-color: yellow;
-	padding: 20px;
-	border-radius: 50%;
+  width: 200px;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 50%;
 }
 .scisson {
-	width: 200px;
-	height: 200px;
-	background-color: blue;
-	padding: 20px;
-	border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  padding: 20px;
+  border-radius: 50%;
 }
 .container {
-	display: flex;
-	justify-content: center;
-	gap: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .disContainer {
-	display: flex;
-	justify-content: center;
-	gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .userImg {
-	width:150px;
-	height: 150px;
-	background-color:black;
-	padding: 5px;
-	border-radius: 50%;
-	color: red;
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 50%;
+  color: red;
 }
-.comImg{
-	width:150px;
-	height: 150px;
-	/* border-color: red; */
-	background-color:black;
-	padding: 5px;
-	border-radius: 50%;
+.comImg {
+  width: 150px;
+  height: 150px;
+  /* border-color: red; */
+  background-color: black;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .store {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-p{
-	font-size: 20px;
+p {
+  font-size: 20px;
 }
 
 button {
-	font-size: 20px;
-	padding: 10px 30px;
-	/* border-color: red; */
-	background-color: black;
-	color: white;
-	border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 30px;
+  /* border-color: red; */
+  background-color: black;
+  color: white;
+  border-radius: 5px;
 }

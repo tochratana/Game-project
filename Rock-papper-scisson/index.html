@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="./style.css">
-</head>
-<body>
-	<h1 style="text-align: center ;">Rock Papper Scisson Game</h1>
-	<div class="container">
-		<img src="./rock.png" class="rock" alt="Rock" onclick="compar('Rock')">
-		<img src="./papper.png" class="papper" alt="Papper" onclick="compar('Papper')">
-		<img src="./scisson.png" class="scisson" alt="Scisson" onclick="compar('Scisson')">
-	</div>
-	<div class="disContainer">
-		<div style="display: flex; flex-direction: column;align-items: center;">
-			<img class="userImg" src="./pow.png" >
-			<p>You</p>
-		</div>
-		<div style="display: flex; flex-direction: column;align-items: center;">
-			<img class="comImg" src="./pow.png">
-			<p>Another</p>
-		</div>
-	</div>
-	<div class="store">
-		<p class="score"> You :</p>
-		<p class="storeScore">Win : 0 , Lost : 0 , Tie : 0</p>
-		<button class="reset">Reset</button>
-	</div>
-	<script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Rock Papper Scisson Game</h1>
+    <div class="container">
+      <img src="./rock.png" class="rock" alt="Rock" onclick="compar('Rock')" />
+      <img
+        src="./papper.png"
+        class="papper"
+        alt="Papper"
+        onclick="compar('Papper')"
+      />
+      <img
+        src="./scisson.png"
+        class="scisson"
+        alt="Scisson"
+        onclick="compar('Scisson')"
+      />
+    </div>
+    <div class="disContainer">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <img class="userImg" src="./pow.png" />
+        <p>You</p>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <img class="comImg" src="./pow.png" />
+        <p>Another</p>
+      </div>
+    </div>
+    <div class="store">
+      <p class="score">You :</p>
+      <p class="storeScore">Win : 0 , Lost : 0 , Tie : 0</p>
+      <button class="reset">Reset</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
